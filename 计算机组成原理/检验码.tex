@@ -324,8 +324,75 @@ a的真值=$2^1 * (-0.0111)$ = -0.111
     \centering
     \includegraphics[scale=0.6]{从科学计数法理解浮点数.png}
     \caption{从科学计数法理解浮点数}
-    \end{figure} 
+    \end{figure}
+\subsection{$IEEE 754$}
+移码：补码的基础上将符号位取反。
+移码只能表示整数
 
+移码的定义：移码=真值+偏置值
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{IEEE.png}
+    \caption{IEEE标准}
+    \end{figure}
+这一部分也是简单了解
+
+\subsection{浮点数的加减运算}
+\begin{enumerate}
+    \item 对阶 小阶向大阶靠齐（方便计算机对尾数处理）
+    \item 尾数加减
+    \item 规格化 即左规或者右规
+    \item 舍入 若规定只能保留6位有效数，则多余的直接砍掉（四舍五入）
+    \item 判溢出， 若规定阶码不能超过两位，若运算后超出范围，则溢出
+\end{enumerate}
+\subsection{电路的基本原理}
+算术逻辑单元（ALU）
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{算术逻辑单元.png}
+    \caption{算术逻辑单元（ALU）}
+    \end{figure}
+基本逻辑（门电路）暂时不看
+
+回忆：奇偶校验码
+
+逻辑表达式是对电路的数学化描述。
+
+一位全加器
+
+本位和等概念，这里使用异或运算实现的。
+
+串行加法器：只有一个全加器，数据逐位串行送入加法器进行运算。
+进位触发器用来寄存进位信号，以便参与下一次运算。
+
+串行进位的并行加法器：把n个全加器串接起来，就可以进行两个n位数的相加。
+每一级进位直接依赖于上一级的进位，即进位信号是逐级形成的。
+
+\subsection{加法器和ALU的改进}
+不用太认真看
+
+\subsection{分类及发展方向}
+电子计算机分为电子模拟计算机和电子数字计算机。
+
+电子数字计算机分为专用计算机和通用计算机。通用计算机又分为大型机，小型机，
+单片机等。
+
+指令和数据流：
+\begin{enumerate}
+    \item 单指令流和单数据流：冯诺依曼体系结构
+    \item 单指令流和多数据流：陈列处理器，向量处理器
+    \item 多指令流和单数据流：实际上不存在
+    \item 多指令流和多数据流：多处理器，多计算机
+\end{enumerate}
+
+\subsection{计算机系统的组成}
+这是计算机系统的组成
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{计算机系统的组成.png}
+    \caption{计算机系统的组成}
+    \end{figure}
+主机包括运算器和控制器（CPU）和主存储器，这个和传统意义的主机是区别的。
 \end{document}
 
 

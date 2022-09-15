@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.8.9)  13 SEP 2022 17:34
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.8.9)  15 SEP 2022 15:05
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -399,14 +399,22 @@ File: 加减交替法.png Graphic file (type bmp)
  [8] [9] [10] [11]
 File: 从科学计数法理解浮点数.png Graphic file (type bmp)
 <从科学计数法理解浮点数.png>
- [12] (./检验码.aux) ) 
+ [12]
+File: IEEE.png Graphic file (type bmp)
+<IEEE.png>
+File: 算术逻辑单元.png Graphic file (type bmp)
+<算术逻辑单元.png>
+ [13] [14]
+File: 计算机系统的组成.png Graphic file (type bmp)
+<计算机系统的组成.png>
+ [15] (./检验码.aux) ) 
 Here is how much of TeX's memory you used:
- 8184 strings out of 476919
- 226659 string characters out of 5825425
+ 8202 strings out of 476919
+ 226875 string characters out of 5825425
  544599 words of memory out of 5000000
- 28074 multiletter control sequences out of 15000+600000
+ 28089 multiletter control sequences out of 15000+600000
  408396 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,6n,104p,361b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 检验码.pdf (12 pages).
+Output written on 检验码.pdf (15 pages).
