@@ -6,21 +6,20 @@ datasg ends
 
 code segment
 start: 
-    mov ax, datasg
+    mov ax, 2000H
     mov ds, ax
-
+    mov bx, 1000H
     mov si, 0
-    mov di, 16
-    mov cx, 8
+    mov ax, [bx + si]
+    inc si
 
- s: mov ax,[si]
-    mov [di], ax
-    add si, 2
-    add di, 2
-    loop s
+    mov cx, [bx + si]
+    inc si
+    mov di, si
+    mov ax, [bx + di]
 
     mov ax, 4c00h
     int 21h
 
 code ends
-end
+end start
