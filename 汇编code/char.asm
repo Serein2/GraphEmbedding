@@ -1,22 +1,39 @@
 assume cs:code, ds:datasg
 datasg segment
-    db 'weclome to masm!' ;定义字符串数据
-    db '...............'
+    db 'ibm             '
+    db 'dec             '
+    db 'dos             '
+    db 'vax             '
 datasg ends
+stacksg segment
+    dw 0, 0, 0, 0, 0, 0, 0, 0
+stacksg ends
 
 code segment
 start: 
-    mov ax, 2000H
+    mov ax, datasg
+    mov ss, ax  ; 给定一个栈段
+    mov sp, 16
+    mov ax, datasg
     mov ds, ax
-    mov bx, 1000H
-    mov si, 0
-    mov ax, [bx + si]
-    inc si
+    mov bx, 0
+    mov cx, 4
 
-    mov cx, [bx + si]
+
+s0: push cx ; 将外层循环的cx压栈
+    mov si, 0 ; si用来表示
+    mov cx, 3
+s:  mov al, [bx + si]
+    and al, 11011111b
+    mov [bx + si], al
     inc si
-    mov di, si
-    mov ax, [bx + di]
+    loop s
+    add bx, 16
+    mov pop, cx  ;使用固定的空间
+    loop s0
+
+
+
 
     mov ax, 4c00h
     int 21h
