@@ -1,38 +1,22 @@
-assume cs:code, ds:datasg
-datasg segment
-    db 'ibm             '
-    db 'dec             '
-    db 'dos             '
-    db 'vax             '
-datasg ends
+assume cs:code, ds:data
+data segment
+    db 3 dup(0)
+    db 3 dup (0, 1, 2)
+    db 3 dup ('abc', 'ABC')
+
+data ends
 stacksg segment
     dw 0, 0, 0, 0, 0, 0, 0, 0
 stacksg ends
 
 code segment
 start: 
-    mov ax, datasg
-    mov ss, ax  ; 给定一个栈段
-    mov sp, 16
-    mov ax, datasg
+    mov ax, data
     mov ds, ax
-    mov bx, 0
-    mov cx, 4
-
-
-s0: push cx ; 将外层循环的cx压栈
-    mov si, 0 ; si用来表示
-    mov cx, 3
-s:  mov al, [bx + si]
-    and al, 11011111b
-    mov [bx + si], al
-    inc si
-    loop s
-    add bx, 16
-    mov pop, cx  ;使用固定的空间
-    loop s0
-
-
+    mov ax, ds:[0]
+    mov dx, ds:[2]
+    div word ptr ds:[4]
+    mov ds:[6], ax
 
 
     mov ax, 4c00h
