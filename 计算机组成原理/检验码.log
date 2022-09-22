@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.8.9)  20 SEP 2022 08:26
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2022.8.9)  22 SEP 2022 16:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -427,14 +427,25 @@ File: DRM的刷新.png Graphic file (type bmp)
 <DRM的刷新.png>
 File: DRM的刷新1.png Graphic file (type bmp)
 <DRM的刷新1.png>
- [20] [21] (./检验码.aux) ) 
+File: ROM.png Graphic file (type bmp)
+<ROM.png>
+File: 双端口RAM.png Graphic file (type bmp)
+<双端口RAM.png>
+File: 多模块存储器.png Graphic file (type bmp)
+<多模块存储器.png>
+File: 多体并行存储器.png Graphic file (type bmp)
+<多体并行存储器.png>
+ [20] [21] [22] [23]
+File: 局部性原理.png Graphic file (type bmp)
+<局部性原理.png>
+ [24] (./检验码.aux) ) 
 Here is how much of TeX's memory you used:
- 8267 strings out of 476919
- 228252 string characters out of 5825425
+ 8306 strings out of 476919
+ 229265 string characters out of 5825425
  544599 words of memory out of 5000000
- 28145 multiletter control sequences out of 15000+600000
+ 28179 multiletter control sequences out of 15000+600000
  408396 words of font info for 68 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  101i,6n,104p,361b,266s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on 检验码.pdf (21 pages).
+Output written on 检验码.pdf (24 pages).

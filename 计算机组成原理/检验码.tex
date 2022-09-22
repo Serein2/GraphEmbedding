@@ -23,7 +23,7 @@
 \begin{enumerate}
     \item 被除数首位为1时，商为1；被除数首位为0时，商为0；
     \item 每一步得到的余数都要抛弃首位；
-    \item 若新的被除数首位(即已抛弃首位的余数)为0，除数为0；
+    \item 若新的被除数首位(即已抛弃首位的余数)为0，除数为0。
 \end{enumerate}
 
 
@@ -478,6 +478,45 @@ a的真值=$2^1 * (-0.0111)$ = -0.111
     \includegraphics[scale=0.6]{DRM的刷新1.png}
     \caption{DRM的刷新}
      \end{figure}
+\subsection{RAM-易失性存储器}
+CPU的任务是到主存中取指令，按指令的指示进行下一步工作。
+主存由RAM和ROM共同组成。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{ROM.png}
+    \caption{ROM}
+     \end{figure}
+\subsection{主存与CPU的连接}
+存取周期：启动存取，存取完，下次存取。（中间有恢复时间）
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{双端口RAM.png}
+    \caption{双端口RAM}
+    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{多模块存储器.png}
+    \caption{双端口存储器}
+    \end{figure}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{多体并行存储器.png}
+    \caption{多体并行存储器}
+    \end{figure}
+\textbf{宏观概念}为在一个存储周期内，交叉存储器可以提供的数据量为
+单个模块的m倍。
+\subsection{高速缓冲存储器-局部性原理性能分析}
+程序访问的局部性原理 -- Cache--主存层次。
+
+命中率H：CPU欲访问的信息已在Cache中的比率。
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.6]{局部性原理.png}
+    \caption{局部性原理}
+    \end{figure}
+\subsection{Cache的基本工作原理}
+
 \end{document}
 
 
